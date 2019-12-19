@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ALEM HODZIC - ZeForge Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arimo|Kanit&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <body>
+
+<section>
+
+
+
+  <div class="container snap">
+        <div class="app-title">
+            <p>-</p>
+
+        </div>
+        <div class="greska"> </div>
+        <div class="weather-container">
+            <div class="weather-icon">
+                <img src="icons/unknown.png" alt="">
+            </div>
+            <div class="temperature-value">
+                <p>- °<span>C</span></p>
+            </div>
+            <div class="temperature-description">
+                <p> - </p>
+            </div>
+            <div class="location">
+                <p>-</p>
+            </div>
+            <div class="idi-dole">
+              <img href="#idi" class="arrow" src="arrow.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+      <div class="pr">
+
+      </div>
+
+
+      <div id="idi"class="novi snap">
+        <div class="search-container">
+
+            <input class="search-bar"type="text" placeholder="Search city name..."name="" value="">
+            <button class="button" style="vertical-align:middle"><span>SEARCH </span></button>
+        </div>
+      </div>
+
+      <div id="pet"class="fiveday snap">
+        <div class="naslov">
+          <h3>-</h3>
+        </div>
+        <div class="main-container">
+
+          <div class="row">
+            <div class="a-title-jedan">
+                <p>-</p>
+          </div>
+          <div class="w-container">
+            <div class="w-icon1">
+                <img src="icons/unknown.png" alt="">
+            </div>
+            <div class="t-value1">
+                <p>- °<span>C</span></p>
+            </div>
+            <div class="t-description1">
+                <p> - </p>
+            </div>
+            <div class="loc">
+              <p>---------</p>
+            </div>
+            <div class="min1">
+              <p>-</p>
+            </div>
+            <div class="max1">
+              <p>-</p>
+            </div>
+          </div>
+
+          </div>
+          <div class="row">
+            <div class="a-title-dva">
+                <p>-</p>
+          </div>
+          <div class="w-container">
+            <div class="w-icon2">
+                <img src="icons/unknown.png" alt="">
+            </div>
+            <div class="t-value2">
+                <p>- °<span>C</span></p>
+            </div>
+            <div class="t-description2">
+                <p> - </p>
+            </div>
+            <div class="loc">
+                <p>---------</p>
+            </div>
+            <div class="min2">
+              <p>-</p>
+            </div>
+            <div class="max2">
+              <p>-</p>
+            </div>
+          </div>
+          </div>
+          <div class="row">
+            <div class="a-title-tri">
+                <p>-</p>
+          </div>
+          <div class="w-container">
+            <div class="w-icon3">
+                <img src="icons/unknown.png" alt="">
+            </div>
+            <div class="t-value3">
+                <p>- °<span>C</span></p>
+            </div>
+            <div class="t-description3">
+                <p> - </p>
+            </div>
+            <div class="loc">
+                <p>---------</p>
+            </div>
+            <div class="min3">
+              <p>-</p>
+            </div>
+            <div class="max3">
+              <p>-</p>
+            </div>
+          </div>
+          </div>
+          <div class="row">
+            <div class="a-title-cetri">
+                <p>-</p>
+          </div>
+          <div class="w-container">
+            <div class="w-icon4">
+                <img src="icons/unknown.png" alt="">
+            </div>
+            <div class="t-value4">
+                <p>- °<span>C</span></p>
+            </div>
+            <div class="t-description4">
+                <p> - </p>
+            </div>
+            <div class="loc">
+                <p>---------</p>
+            </div>
+            <div class="min4">
+              <p>-</p>
+            </div>
+            <div class="max4">
+              <p>-</p>
+            </div>
+          </div>
+          </div>
+          <div class="row last">
+            <div class="a-title-pet">
+                <p>-</p>
+          </div>
+          <div class="w-container">
+            <div class="w-icon5">
+                <img src="icons/unknown.png" alt="">
+            </div>
+            <div class="t-value5">
+                <p>- °<span>C</span></p>
+            </div>
+            <div class="t-description5">
+                <p> - </p>
+            </div>
+            <div class="loc">
+                <p>---------</p>
+            </div>
+            <div class="min5">
+              <p>-</p>
+            </div>
+            <div class="max5">
+              <p>-</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+</section class="snapmain">
+<button href="#top" type="button" name="button" class="top">GO TO TOP</button>
+
+    <script>
+
+
+    $("button[href='#top']").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      setTimeout(function(){ location.reload(); }, 2000);
+      return false;
+    });
+
+
+      const vrem1 = document.querySelector(".a-title-jedan p");
+      const vrem2 = document.querySelector(".a-title-dva p");
+      const vrem3 = document.querySelector(".a-title-tri p");
+      const vrem4 = document.querySelector(".a-title-cetri p");
+      const vrem5 = document.querySelector(".a-title-pet p");
+      const ikon1 = document.querySelector(".w-icon1");
+      const ikon2 = document.querySelector(".w-icon2");
+      const ikon3 = document.querySelector(".w-icon3");
+      const ikon4 = document.querySelector(".w-icon4");
+      const ikon5 = document.querySelector(".w-icon5");
+      const tempe1 = document.querySelector(".t-value1 p");
+      const tempe2 = document.querySelector(".t-value2 p");
+      const tempe3 = document.querySelector(".t-value3 p");
+      const tempe4 = document.querySelector(".t-value4 p");
+      const tempe5 = document.querySelector(".t-value5 p");
+      const opiss1 = document.querySelector(".t-description1 p");
+      const opiss2 = document.querySelector(".t-description2 p");
+      const opiss3 = document.querySelector(".t-description3 p");
+      const opiss4 = document.querySelector(".t-description4 p");
+      const opiss5 = document.querySelector(".t-description5 p");
+      const min1 = document.querySelector(".min1");
+      const min2 = document.querySelector(".min2");
+      const min3 = document.querySelector(".min3");
+      const min4 = document.querySelector(".min4");
+      const min5 = document.querySelector(".min5");
+      const max1 = document.querySelector(".max1");
+      const max2 = document.querySelector(".max2");
+      const max3 = document.querySelector(".max3");
+      const max4 = document.querySelector(".max4");
+      const max5 = document.querySelector(".max5");
+      const lok = document.querySelector(".loc p");
+      let naslov = document.querySelector(".naslov h3");
+      let grad;
+      $(".button").click(function(){
+        grad = $(".search-bar").val();
+        if($(".search-bar").val()){
+          $(".top").css("display","block");
+          $(".fiveday").css("display","flex");
+          $('html, body').animate({
+            scrollTop: ($('#pet').offset().top)
+          },1100);
+          fiveday();
+        }
+      });
+      let br=1;
+      function fiveday(){
+          let link = 'https://api.openweathermap.org/data/2.5/forecast?q=' + grad + '&appid=9dcd8991f9f548f9d28bc5cf37a80c4e&units=metric';
+          fetch(link)
+              .then(function(response){
+                  let data = response.json();
+                  return data;
+              })
+              .then(function(data){
+                  let str = grad.toUpperCase();
+                  naslov.innerHTML = `<h3>Five day weather forecast for: ${str} </h3>`
+                  for(let i=1;i<data.list.length;i+=8){
+                    let datum = data.list[i].dt_txt.split(' ')[0];
+                    let temp = Math.floor(data.list[i].main.temp);
+                    console.log("min: " + data.list[i].main.temp_min);
+                    console.log("max: " + data.list[i].main.temp_max);
+                    if(br==1){
+                      vrem1.innerHTML = `<p> ${datum} </p>`
+                      ikon1.innerHTML = `<img src="icons/${data.list[i].weather[0].icon}.png"/>`
+                      tempe1.innerHTML = `${temp}°<span>C</span>`;
+                      opiss1.innerHTML = `<p>${data.list[i].weather[0].description}</p>`;
+                      min1.innerHTML = `<p>MIN: ${data.list[i].main.temp_min} °C </p>`
+                      max1.innerHTML = `<p>MAX: ${data.list[i].main.temp_max} °C </p>`
+                    }
+                    if(br==2){
+                      vrem2.innerHTML = `<p> ${datum} </p>`
+                      ikon2.innerHTML =`<img src="icons/${data.list[i].weather[0].icon}.png"/>`
+                      tempe2.innerHTML = `${temp}°<span>C</span>`;
+                      opiss2.innerHTML = `<p>${data.list[i].weather[0].description}</p>`;
+                      min2.innerHTML = `<p>MIN: ${data.list[i].main.temp_min} °C </p>`
+                      max2.innerHTML = `<p>MAX: ${data.list[i].main.temp_max} °C </p>`
+                    }
+                    if(br==3){
+                      vrem3.innerHTML = `<p> ${datum} </p>`
+                      ikon3.innerHTML =  `<img src="icons/${data.list[i].weather[0].icon}.png"/>`
+                      tempe3.innerHTML = `${temp}°<span>C</span>`;
+                      opiss3.innerHTML = `<p>${data.list[i].weather[0].description}</p>`;
+                      min3.innerHTML = `<p>MIN: ${data.list[i].main.temp_min} °C </p>`
+                      max3.innerHTML = `<p>MAX: ${data.list[i].main.temp_max} °C </p>`
+                    }
+                    if(br==4){
+                      vrem4.innerHTML = `<p> ${datum} </p>`
+                      ikon4.innerHTML =  `<img src="icons/${data.list[i].weather[0].icon}.png"/>`
+                      tempe4.innerHTML = `${temp}°<span>C</span>`;
+                      opiss4.innerHTML = `<p>${data.list[i].weather[0].description}</p>`;
+                      min4.innerHTML = `<p>MIN: ${data.list[i].main.temp_min} °C </p>`
+                      max4.innerHTML = `<p>MAX: ${data.list[i].main.temp_max} °C </p>`
+                    }
+                    if(br==5){
+                      vrem5.innerHTML = `<p> ${datum} </p>`
+                      ikon5.innerHTML =  `<img src="icons/${data.list[i].weather[0].icon}.png"/>`
+                      tempe5.innerHTML = `${temp}°<span>C</span>`;
+                      opiss5.innerHTML = `<p>${data.list[i].weather[0].description}</p>`;
+                      min5.innerHTML = `<p>MIN: ${data.list[i].main.temp_min} °C </p>`
+                      max5.innerHTML = `<p>MAX: ${data.list[i].main.temp_max} °C </p>`
+                    }
+
+                    br++;
+                  }
+
+              })
+      }
+
+      const vrijeme = document.querySelector(".app-title p");
+      const ikone = document.querySelector(".weather-icon");
+      const temp = document.querySelector(".temperature-value p");
+      const opis = document.querySelector(".temperature-description p");
+      const lokacija = document.querySelector(".location p");
+      const greska = document.querySelector(".greska");
+      let datum = new Date();
+      let d = datum.getDate();
+      let m = datum.getMonth();
+      let month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      let y = datum.getFullYear();
+      let danas = d + ' ' + month[m] + ' ' + y;
+      vrijeme.innerHTML = `<p> ${danas} </p>`
+      const weather = {};
+
+      weather.temperature = {
+          unit : "celsius"
+      };
+
+      const KELVIN = 273;
+      const key = "e1603fb9a5d002bd29341af23c0e120f";
+
+
+      if('geolocation' in navigator){
+          navigator.geolocation.getCurrentPosition(setPosition, showError);
+      }else{
+          greska.style.display = "block";
+          greska.innerHTML = "<p>Browser doesn't Support Geolocation</p>";
+      }
+
+
+      function setPosition(position){
+          let latitude = position.coords.latitude;
+          let longitude = position.coords.longitude;
+
+          getWeather(latitude, longitude);
+
+      }
+
+      function showError(error){
+          greska.style.display = "block";
+          greska.innerHTML = `<p> ${error.message} </p>`;
+      }
+
+
+      function getWeather(latitude, longitude){
+          let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+
+          fetch(api)
+              .then(function(response){
+                  let data = response.json();
+                  return data;
+              })
+              .then(function(data){
+                  weather.temperature.value = Math.floor(data.main.temp - KELVIN);
+                  weather.description = data.weather[0].description;
+                  weather.iconId = data.weather[0].icon;
+                  weather.city = data.name;
+                  weather.country = data.sys.country;
+
+              })
+              .then(function(){
+                  displayWeather();
+              });
+      }
+
+
+      function displayWeather(){
+          ikone.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
+          temp.innerHTML = `${weather.temperature.value}°<span>C</span>`;
+          opis.innerHTML = weather.description;
+          lokacija.innerHTML = `${weather.city}, ${weather.country}`;
+      }
+
+
+      function celsiusFahrenheit(temperature){
+          return (temperature * 9/5) + 32;
+      }
+
+
+      temp.addEventListener("click", function(){
+          if(weather.temperature.value === undefined) return;
+
+          if(weather.temperature.unit == "celsius"){
+              let fahrenheit = celsiusFahrenheit(weather.temperature.value);
+              fahrenheit = Math.floor(fahrenheit);
+
+              temp.innerHTML = `${fahrenheit}°<span>F</span>`;
+              weather.temperature.unit = "fahrenheit";
+          }else{
+              temp.innerHTML = `${weather.temperature.value}°<span>C</span>`;
+              weather.temperature.unit = "celsius";
+          }
+      });
+
+
+      /*SLIDE*/
+        $(".arrow").click(function(){
+          $(".pr").css("display","block");
+          $(".novi").css("display","flex");
+          $('html, body').animate({
+            scrollTop: ($('#idi').offset().top)
+        },1100);
+
+        });
+
+    </script>
+  </body>
+</html>
